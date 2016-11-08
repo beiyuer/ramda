@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Warp Up 落幕</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="warp-up-"><a class="header-link" href="#warp-up-"></a>Warp Up 落幕</h1>
+<p>This post completes a series about functional programming called <a href="http://randycoulman.com/blog/categories/thinking-in-ramda/">Thinking in Ramda</a></p>
+<p>这是关于<a href="http://randycoulman.com/blog/categories/thinking-in-ramda/">Ramda编程思想</a>系列的最后一篇文章。</p>
+<p>Over the past eight posts, we’ve been talking about the <a href="http://ramdajs.com/">Ramda JavaScript library</a> that provides functions for working with JavaScript in a functional, declarative, and immutable way.</p>
+<p>在之前的八篇文章中，我们学习了<a href="http://ramdajs.com/">Ramda JS库</a>。
+Ramda的函数为我们提供了函数式的、声明式的、纯净的思路。</p>
+<p>During the series, we learned that Ramda has some underlying principles that drive its API:</p>
+<ul class="list">
+<li>Data last: Almost all of the functions take the data parameter as the last parameter.</li>
+<li>Currying: Almost every function in Ramda is “curried”. That is, you can call a function with only a subset of its required arguments, and it will return a new function that takes the remaining arguments. Once all of the arguments are provided, the original function is invoked.</li>
+</ul>
+<p>在这个文章系列里，我们学习了Ramda API的原则：</p>
+<ul class="list">
+<li>数据放在最后：绝大多数函数的最后一个参数是数据。</li>
+<li>柯里化：绝大多数函数都是被“柯里化”了的。也就是说，你可以调用这个函数，只用其参数的一个子集，从而得到一个需要剩下的参数的新函数。一旦提供了这个函数的所有参数，就相当于调用了原来的函数。</li>
+</ul>
+<p>These two principles allow us to write very clear functional code that combines basic building blocks into more powerful operations.</p>
+<p>这两个原则让我们写出非常清楚的、函数式的代码，通过基本的函数构建出更强大的函数。</p>
+<h1 id="summary-"><a class="header-link" href="#summary-"></a>Summary 总结</h1>
+<p>For reference, here’s a quick summary of the series.</p>
+<p>作为参考，下面是这个文章系列的快速总结。</p>
+<ul class="list">
+<li><p><a href="1-Getting%20Started.html">Getting Started</a> introduces us to the idea of functions, pure functions, and immutability. It then gets us started by looking at the collection iteration functions like <code>map</code>, <code>filter</code>, and <code>reduce</code>.</p>
+</li>
+<li><p><a href="1-Getting%20Started.html">起步</a>介绍了函数、纯函数、不变性的概念，然后介绍了集合迭代函数，比如<code>map</code>，<code>filter</code>和<code>reduce</code>。</p>
+</li>
+<li><p><a href="2-Combining%20Functions.html">Combining Functions</a> shows us that we can combine functions in various ways using tools such as both, either, pipe, and compose.</p>
+</li>
+<li><p><a href="2-Combining%20Functions.html">函数组合</a>介绍了函数可以以多种方式组合起来，介绍了<code>both</code>、<code>either</code>、<code>pipe</code>、<code>compose</code>等函数。</p>
+</li>
+<li><p><a href="3-Patial%20Application.html">Patial Application</a> helps us discover that it can be useful to only supply some of the arguments to a function, allowing a later function to supply the rest. We use <code>partial</code> and <code>curry</code> to help us with this and learn about <code>flip</code> and the placeholder <code>__</code>.</p>
+</li>
+<li><p><a href="3-Patial%20Application.html">偏应用函数</a>通过<code>partial</code>和<code>curry</code>函数介绍了只提供给函数一部分参数、然后再补全其他参数的这种方法，并且展示了出这种方法很有用。这一节还介绍了<code>flip</code>函数和占位符<code>__</code>。</p>
+</li>
+<li><p><a href="4-Declarative%20Programming.html">Declarative Programming</a> teaches us about the difference between imperative and declarative programming. We learn how to use Ramda’s declarative replacements for arithmetic, comparisons, logic, and conditionals.</p>
+</li>
+<li><p><a href="4-Declarative%20Programming.html">声明式编程</a>介绍了命令式编程和声明式编程的不同点，
+介绍了Ramda的声明式的算数、比较、逻辑、条件运算符。</p>
+</li>
+<li><p><a href="5-Pointfree%20Style.html">Pointfree Style</a> introduces us to the idea of pointfree style, also known as tacit programming. In pointfree style, we don’t actually see the data parameter that we’re operating on; it’s implicit. Our programs are made up of small, simple building blocks that are combined together to do what we need. Only at the end do we apply our compound functions to the actual data.</p>
+</li>
+<li><p><a href="5-Pointfree%20Style.html">心照不宣</a>介绍了隐藏参数的概念与方法。在这种心照不宣的编程风格中，我们不会看到表示数据的形式参数，
+因为参数被隐藏起来了。我们的程序用小而简单的函数，组成了我们需要的强大函数。只有在最后，我们才会向函数提供数据时。</p>
+</li>
+<li><p><a href="6-Immutability%20and%20Objects.html">Immutability and Objects</a> returns us to the idea of working declaratively, this time giving us the tools we need to read, update, delete, and transform properties of objects.</p>
+</li>
+<li><p><a href="6-Immutability%20and%20Objects.html">不变对象</a>介绍了声明式地操作对象，包括读取，更新，删除和改变对象的属性。</p>
+</li>
+<li><p><a href="7-Immutability%20and%20Arrays.html">Immutability and Arrays</a> continues the theme and shows us how to do the same for arrays.</p>
+</li>
+<li><p><a href="7-Immutability%20and%20Arrays.html">不变数组</a>介绍了声明式地操作数组，类似声明式地操作数据。</p>
+</li>
+<li><p><a href="8-Lenses.html">Lenses</a> concludes by introducing the concept of a lens, a construct that allows us to focus on a small part of a larger data structure. Using the view, set, and over functions, we can read, update, and transform the focused value in the context of its larger data structure.</p>
+</li>
+<li><p><a href="8-Lenses.html">放大镜</a>介绍了放大镜的概念。放大镜是一种函数，让我们注重观察某个大的数据结构的一小部分内容。通过<code>view</code>、<code>set</code>和<code>over</code>函数，我们在大的数据的上下文中，可以读取，更新，删除和改变一部分关注的值。</p>
+</li>
+</ul>
+<h1 id="what-s-next-"><a class="header-link" href="#what-s-next-"></a>What&#39;s Next 下一步</h1>
+<p>We didn’t cover every part of Ramda in this series. In particular, we didn’t talk about functions for working with strings, and we didn’t talk about more advanced concepts such as <a href="http://ramdajs.com/0.21.0/docs/#transduce">transducers</a>.</p>
+<p>在这一系列文章中，我们并没有涉及Ramda的每一个方面。比如，我们没有介绍操作字符串的函数，也没有涉及例如<a href="(http://ramdajs.com/0.21">变换器</a>的高级概念。</p>
+<p>To learn more about what Ramda can do, I recommend perusing the <a href="http://ramdajs.com/docs/">documentation</a>. There’s a wealth of information there. All of the functions are grouped by the type of data they work with, though there is some overlap. For example, several of the array functions will also work on strings, and map works on both arrays and objects.</p>
+<p>如果想进一步学习Ramda能做的事, 我推荐使用<a href="http://ramdajs.com/docs/">官方文档</a>. 官方文档有很多有价值的信息。文档中的每一个函数都通过其操作的数据的类型分组。虽然可能数据的类型会有重叠，比如有几个操作数组的函数用于字符串，<code>map</code>函数可以用于数组和对象。</p>
+<p>If you’re interested in more advanced functional topics, here are some places you can go:</p>
+<ul class="list">
+<li><p>Transducers: There’s a <a href="http://simplectic.com/blog/2015/ramda-transducers-logs/">good introductory article</a> on parsing logs with transducers.</p>
+</li>
+<li><p>Algebraic Data Types: If you’ve read much about functional programming, you’ll have heard about algebraic types and terms such as “Functor”, “Applicative”, and “Monad.” If you’re interested in exploring these ideas in the context of Ramda, check out the <a href="https://github.com/ramda/ramda-fantasy">ramda-fantasy project</a>, which implements several data types that comply with the <a href="https://github.com/fantasyland/fantasy-land">Fantasy Land Specification</a> (a.k.a. the Algebraic JavaScript Specification).</p>
+</li>
+</ul>
+<p>如果你想了解更多关于函数的高级主题，下面有一些相关资料。</p>
+<ul class="list">
+<li><p>变换器：关于变换器的<a href="http://simplectic.com/blog/2015/ramda-transducers-logs/">文章</a>介绍了用变换器解析日志文件。</p>
+</li>
+<li><p>代数数据类型：如果你很了解函数式编程，你就会听说过代数类型和一些术语，比如“Functor”，“Applicative”和“Monad”。如果你有志于用Ramda探索这个领域，快来看看<a href="https://github.com/ramda/ramda-fantasy">ramda-fantasy project</a>，这个项目实现了许多代数数据类型，符合<a href="https://github.com/fantasyland/fantasy-land">JS代数数据类型规范</a>。</p>
+</li>
+</ul>
+    </article>
+  </body>
+</html>
